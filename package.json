@@ -1,0 +1,20 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "Hello World",
+  "main": "helloworld.js",
+  "scripts": {
+    "start": "node dist/src/helloworld.js",
+    "build": "./node_modules/.bin/tsc",
+    "clean": "rm -rf dist/*.js dist/*.map",
+    "test": "./node_modules/.bin/jasmine dist/spec/*spec.js"
+  },
+  "author": "Robert Gravina",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.7",
+    "jasmine": "^3.1.0",
+    "ts-node": "^6.0.3",
+    "typescript": "^2.8.3"
+  }
+}
