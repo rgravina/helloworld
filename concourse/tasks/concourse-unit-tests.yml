@@ -1,0 +1,12 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: node
+
+inputs:
+  - name: helloword-repo
+
+run:
+  path: helloword-repo/concourse/scripts/run-tests.sh

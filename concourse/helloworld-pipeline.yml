@@ -1,0 +1,15 @@
+resources:
+  - name: helloword-repo
+    type: git
+    source:
+      uri: "https://github.com/rgravina/helloworld.git"
+
+jobs:
+  - name: unit-tests
+    plan:
+      - get: helloword-repo
+        trigger: true
+      - task: Run all unit tests
+        timeout: 59m
+        file: helloword-repo/concourse/tasks/concourse-unit-tests.yml
+
